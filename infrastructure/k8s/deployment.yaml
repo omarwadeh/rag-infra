@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-query
+  namespace: rag
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: rag-query }
+    
+  template:
+    metadata:
+      labels: { app: rag-query }
+    spec:
+      containers:
+        - name: rag-query
+          image: ghcr.io/ORG/REPO/rag-service:latest
+          ports: [{ containerPort: 8080 }]
