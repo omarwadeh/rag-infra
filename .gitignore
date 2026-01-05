@@ -4,3 +4,8 @@ awscliv2.zip
 awscliv2.zip
 .terraform/
 **/.terraform/*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
